@@ -5,13 +5,99 @@
     <title>ИгроТоп</title>
     <link rel="icon" type="image/png" sizes="128x128" href="icon_table.png">
 </head>
-<body>
+<body bgcolor="#f0ffff" leftmargin="50">
     <font color="gray">
-        <h2 align="center"><strong>ИгроТоп</strong></h2>
+        <h1 align="center"><strong>ИгроТоп</strong></h1>
     </font>
-    <ul type="none">
-        <li><a href="index.html"><big>На страницу "ИгроЖанры"</big></a></li>
-    </ul>
+    <a href="index.html"><big>На страницу "ИгроЖанры"</big></a>
+    <hr size="2" color="black">
+        <h2>Построение графиков</h2>
+    <hr size="2" color="black">
+    <details>
+        <summary><big><strong>Сортировка таблицы</strong> </big></summary>
+        <form>
+            <fieldset>
+                <legend>Первый уровень:</legend>
+                <input type="radio" name="sortFirst" value="firstColumn">Название игры<br>
+                <input type="radio" name="sortFirst" value="secondColumn">Дата выхода<br>
+                <input type="radio" name="sortFirst" value="thirdColumn">Жанр<br>
+                <input type="radio" name="sortFirst" value="fourthColumn">Рейтинг<br>
+                <input type="radio" name="sortFirst" value="fifthColumn">Разработчик<br>
+                <input type="radio" name="sortFirst" value="sixthColumn">Платформы<br>
+                Сделать сортировку по убыванию?<input type="checkbox" name="descFirst">
+            </fieldset>
+            <fieldset>
+                <legend>Второй уровень:</legend>
+                <input type="radio" name="sortSecond" value="firstColumn">Название игры<br>
+                <input type="radio" name="sortSecond" value="secondColumn">Дата выхода<br>
+                <input type="radio" name="sortSecond" value="thirdColumn">Жанр<br>
+                <input type="radio" name="sortSecond" value="fourthColumn">Рейтинг<br>
+                <input type="radio" name="sortSecond" value="fifthColumn">Разработчик<br>
+                <input type="radio" name="sortSecond" value="sixthColumn">Платформы<br>
+                Сделать сортировку по убыванию?<input type="checkbox" name="descFirst">
+            </fieldset>
+            <fieldset>
+                <legend>Третий уровень:</legend>
+                <input type="radio" name="sortThird" value="firstColumn">Название игры<br>
+                <input type="radio" name="sortThird" value="secondColumn">Дата выхода<br>
+                <input type="radio" name="sortThird" value="thirdColumn">Жанр<br>
+                <input type="radio" name="sortThird" value="fourthColumn">Рейтинг<br>
+                <input type="radio" name="sortThird" value="fifthColumn">Разработчик<br>
+                <input type="radio" name="sortThird" value="sixthColumn">Платформы<br>
+                Сделать сортировку по убыванию?<input type="checkbox" name="descFirst">
+            </fieldset>
+            <br>
+            <input type="button" name="sort" value="Сортировать">
+        </form>
+    </details>
+    <details>
+        <summary><big><strong>Фильтр таблицы</strong></big></summary>
+        <form>
+            <fieldset>
+                <p>
+                    <label for="naming">Название игры:</label>
+                    <input type="text" id="naming">
+                </p>
+                <p>
+                    <label for="date1">Дата выхода: от</label>
+                    <input type="date" id="date1">
+                    <label for="date2">до</label>
+                    <input type="date" id="date2">
+                </p>
+                <p>
+                    <label for="raiting1">Рейтинг: от</label>
+                    <input type="number" id="raiting1" min="0.0" max="10.0">
+                    <label for="raiting2">до</label>
+                    <input type="number" id="raiting2" min="0.0" max="10.0">
+                </p>
+                <p>
+                    <label for="genre">Жанр:</label>
+                    <input type="text" id="genre"><br>
+                </p>
+                <p>
+                    <label for="dev">Разработчик:</label>
+                    <input type="text" id="dev">
+                </p>
+                <p>
+
+                    <label> Платформы:<br>
+                        <input type="checkbox" name="platform" value="0"> PC<br>
+                        <input type="checkbox" name="platform" value="1"> PlayStation Portable (PSP)<br>
+                        <input type="checkbox" name="platform" value="2"> PlayStation 2<br>
+                        <input type="checkbox" name="platform" value="3"> PlayStation 3<br>
+                        <input type="checkbox" name="platform" value="4"> PlayStation 4<br>
+                        <input type="checkbox" name="platform" value="5"> PlayStation 5<br>
+                        <input type="checkbox" name="platform" value="6"> Xbox 360<br>
+                        <input type="checkbox" name="platform" value="7"> Xbox Series X<br>
+                        <input type="checkbox" name="platform" value="8"> Xbox One<br>
+                        <input type="checkbox" name="platform" value="9"> Android<br>
+                        <input type="checkbox" name="platform" value="10"> iOS<br>
+                    </label>
+                </p>
+                <input type="button" value="Отфильтровать" id="find">
+            </fieldset>
+        </form>
+    </details>
     <hr size="2" color="black">
     <table border="1" cellpadding="5" bordercolor="gray" align="center">
         <tr valign="center" align="center">
@@ -20,7 +106,7 @@
             <th>Жанр</th>
             <th>Рейтинг</th>
             <th>Разработчик</th>
-            <th>Платформы</th>
+            <th width="200">Платформы</th>
             <th width="45" height="50">Логотип</th>
             <th width="150">Ссылка на обзор</th>
         </tr>
